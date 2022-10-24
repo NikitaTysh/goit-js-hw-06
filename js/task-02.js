@@ -8,5 +8,11 @@ const ingredients = [
 ];
 
 const ulElm = document.querySelector("#ingredients");
-const el = ingredients.map((el) => `<li class="item">${el}</li>`).join("");
-ulElm.innerHTML = el;
+ingredients.forEach((n)=>{
+  const el = document.createElement('li')
+  el.classList = 'item'
+  el.textContent = n
+  ulElm.append(el)
+})
+
+  
